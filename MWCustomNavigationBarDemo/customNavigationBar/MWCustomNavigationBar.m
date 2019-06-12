@@ -11,6 +11,10 @@
 
 #define SCREEN_WID [UIScreen mainScreen].bounds.size.width
 
+#define CUSTOM_GRAY_COLOR [UIColor colorWithRed:240.0f/255.0f green:240.0f/255.0f blue:240.0f/255.0f alpha:1]
+
+#define SYSTEM_BLUE_COLOR [UIColor colorWithRed:0.0f green:0.48f blue:1.0f alpha:1.0f]
+
 @implementation UIViewController (MWRoute)
 
 - (void)mw_toLastViewController
@@ -117,7 +121,7 @@
     
     _navBar = [[MWNavigationBar alloc] initWithFrame:CGRectMake(0,0,SCREEN_WID,[MWCustomNavigationBar navigationBarHeight])];
     //设置导航栏默认tintcolor
-    _navBar.barTintColor = [UIColor colorWithRed:255.0f/255.0f green:160.0f/255.0f blue:58.0f/255.0f alpha:1];;
+    _navBar.barTintColor = CUSTOM_GRAY_COLOR;
     //设置导航栏默认标题颜色
     [_navBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [_navBar setTintColor:[UIColor whiteColor]];

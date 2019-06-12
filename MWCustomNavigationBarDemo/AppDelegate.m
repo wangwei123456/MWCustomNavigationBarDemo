@@ -23,9 +23,7 @@
     UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:[[ViewController alloc]init]];
     nav.navigationBarHidden = TRUE;
     self.window.rootViewController = nav;
-    
-    
-    
+   
     return YES;
 }
 
