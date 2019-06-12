@@ -25,7 +25,7 @@
     self.navBar.title = NSStringFromClass([self class]);
     self.navBar.leftImage = [UIImage imageNamed:@"back"];
     self.navBar.rightText = @"完成";
-//    self.navBar.rightTextColor = [UIColor redColor];
+//    self.navBar.rightItemTintColor = [UIColor redColor];
     self.navBar.delegate = self;
     
 }

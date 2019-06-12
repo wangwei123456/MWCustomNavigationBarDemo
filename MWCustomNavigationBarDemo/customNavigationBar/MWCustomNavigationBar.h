@@ -36,15 +36,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property(retain, nonatomic) UIColor  *titleColor;
 
 @property(retain, nonatomic) UIImage *leftImage;
-@property(retain, nonatomic) UIColor *leftImageColor;
 @property(retain, nonatomic) UIImage *rightImage;
-@property(retain, nonatomic) UIColor *rightImageColor;
 
 @property(copy, nonatomic) NSString *leftText;
-@property(retain, nonatomic) UIColor *leftTextColor;
 @property(copy, nonatomic) NSString *rightText;
-@property(retain, nonatomic) UIColor *rightTextColor;
 
+@property(retain, nonatomic) UIColor *leftItemTintColor;
+@property(retain, nonatomic) UIColor *rightItemTintColor;
 
 + (instancetype)customNavigationBar;
 

@@ -21,9 +21,9 @@
     self.navBar.title = NSStringFromClass([self class]);
     self.navBar.titleColor = [UIColor redColor];
     self.navBar.leftImage = [UIImage imageNamed:@"back"];
-    self.navBar.leftImageColor = [UIColor colorWithRed:0.0f green:0.48f blue:1.0f alpha:1.0f];
+    self.navBar.leftItemTintColor = [UIColor colorWithRed:0.0f green:0.48f blue:1.0f alpha:1.0f];
     self.navBar.rightImage = [UIImage imageNamed:@"add"];
-    self.navBar.rightImageColor = [UIColor blueColor];
+    self.navBar.rightItemTintColor = [UIColor blueColor];
     self.navBar.onClickRightAction = ^{
         NSLog(@"你点击了右边的按钮");
     };

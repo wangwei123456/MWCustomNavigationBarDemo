@@ -23,14 +23,13 @@
     //隐藏基类的自带的navBar
     self.navBar.hidden = TRUE;
     
-    //
+    //重新创建导航栏试图
     MWCustomNavigationBar * customNavBar = [MWCustomNavigationBar customNavigationBar];
     customNavBar.title = NSStringFromClass([self class]);
     customNavBar.leftImage = [UIImage imageNamed:@"back"];
     customNavBar.rightImage = [UIImage imageNamed:@"more"];
     customNavBar.barBackgroundColor = [UIColor clearColor];
     [self.view addSubview:customNavBar];
-    
 
 }
 

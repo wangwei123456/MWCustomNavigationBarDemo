@@ -102,7 +102,7 @@
     //不能使用statusBarFrame的高度 因为如果被status bar被隐藏了 就获取不到高度了，国产App大部分的启动页广告都会遮挡住status bar
     CGFloat navigationHeight = 44 + 20;
     if ([self isIPhoneXSeries]) {
-        navigationHeight = 44 + 44;
+        navigationHeight = 44 + 44;//iPhoneX系列导航栏高度
     }
     return navigationHeight;
 }
@@ -159,11 +159,6 @@
     _navItem.leftBarButtonItem = navLeftImageBtn;
 }
 
-- (void)setLeftImageColor:(UIColor *)leftImageColor{
-    _leftImageColor = leftImageColor;
-    [_navItem.leftBarButtonItem setTintColor:_leftImageColor];
-
-}
 
 - (void)setRightImage:(UIImage *)rightImage{
     _rightImage = rightImage;
@@ -173,20 +168,11 @@
     _navItem.rightBarButtonItem = navRightBtn;
 }
 
-- (void)setRightImageColor:(UIColor *)rightImageColor{
-    _rightImageColor = rightImageColor;
-    [_navItem.rightBarButtonItem setTintColor:_rightImageColor];
-}
 
 - (void)setLeftText:(NSString *)leftText{
     _leftText = leftText;
     UIBarButtonItem *navLeftTextBtn = [[UIBarButtonItem alloc] initWithTitle:_leftText style:UIBarButtonItemStyleDone target:self action:@selector(leftAction:)];
     _navItem.leftBarButtonItem = navLeftTextBtn;
-}
-
-- (void)setLeftTextColor:(UIColor *)leftTextColor{
-    _leftTextColor = leftTextColor;
-    [_navItem.leftBarButtonItem setTintColor:_leftTextColor];
 }
 
 - (void)setRightText:(NSString *)rightText{
@@ -195,12 +181,15 @@
     _navItem.rightBarButtonItem = navRightBtn;
 }
 
-- (void)setRightTextColor:(UIColor *)rightTextColor{
-    _rightTextColor = rightTextColor;
-    [_navItem.rightBarButtonItem setTintColor:_rightTextColor];
+
+- (void)setLeftItemTintColor:(UIColor *)leftItemTintColor{
+    _leftItemTintColor = leftItemTintColor;
+    [_navItem.leftBarButtonItem setTintColor:_leftItemTintColor];
 }
-
-
+- (void)setRightItemTintColor:(UIColor *)rightItemTintColor{
+    _rightItemTintColor = rightItemTintColor;
+    [_navItem.rightBarButtonItem setTintColor:_rightItemTintColor];
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
